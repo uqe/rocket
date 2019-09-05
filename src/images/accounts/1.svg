@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="36" viewBox="0 0 48 36">
+    <defs>
+        <path id="a" d="M0 2C0 .895.89 0 2 0h34l12 12v21.995A2.002 2.002 0 0 1 45.999 36H2A1.997 1.997 0 0 1 0 34V2z"/>
+        <filter id="b" width="172.9%" height="197.2%" x="-36.5%" y="-34.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+        </filter>
+        <path id="d" d="M36 0h12v12h-9.991A2.01 2.01 0 0 1 36 9.991V0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="c" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#000" filter="url(#b)" xlink:href="#a"/>
+        <use fill="#FFF" xlink:href="#a"/>
+        <g mask="url(#c)">
+            <use fill="#FFF" xlink:href="#d"/>
+            <use fill="#FDAFA4" xlink:href="#d"/>
+        </g>
+        <text fill="#333" font-family="AppleColorEmoji, Apple Color Emoji" font-size="14" mask="url(#c)">
+            <tspan x="15" y="24">⛵️</tspan>
+        </text>
+    </g>
+</svg>

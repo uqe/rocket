@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="36" viewBox="0 0 48 36">
+    <defs>
+        <path id="a" d="M894 0h386v668H894z"/>
+        <filter id="b" width="100.3%" height="100.1%" x="-.1%" y="-.1%" filterUnits="objectBoundingBox">
+            <feOffset dx="-1" in="SourceAlpha" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 0.543579932 0 0 0 0 0.543579932 0 0 0 0 0.543579932 0 0 0 0.0800498188 0"/>
+        </filter>
+        <path id="c" d="M0 2C0 .895.89 0 2 0h34l12 12v21.995A2.002 2.002 0 0 1 45.999 36H2A1.997 1.997 0 0 1 0 34V2z"/>
+        <filter id="d" width="172.9%" height="197.2%" x="-36.5%" y="-34.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+        </filter>
+        <path id="f" d="M36 0h12v12h-9.991A2.01 2.01 0 0 1 36 9.991V0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FAFAFA" d="M-954-273H326v668H-954z"/>
+        <g transform="translate(-954 -273)">
+            <use fill="#F6F6F6" xlink:href="#a"/>
+            <use fill="#000" filter="url(#b)" xlink:href="#a"/>
+        </g>
+        <g>
+            <mask id="e" fill="#fff">
+                <use xlink:href="#c"/>
+            </mask>
+            <use fill="#000" filter="url(#d)" xlink:href="#c"/>
+            <use fill="#FFF" xlink:href="#c"/>
+            <g mask="url(#e)">
+                <use fill="#FFF" xlink:href="#f"/>
+                <use fill="#FDAFA4" xlink:href="#f"/>
+            </g>
+            <text fill="#333" font-family="AppleColorEmoji, Apple Color Emoji" font-size="14" mask="url(#e)">
+                <tspan x="15" y="24">🕹</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
