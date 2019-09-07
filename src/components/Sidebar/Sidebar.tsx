@@ -12,6 +12,7 @@ import Shrug from './Shrug'
 import AccountFeed from './AccountFeed'
 
 const Wrapper = styled.aside`
+  overflow: auto;
   box-shadow: inset 1px 0px 10px 2px rgba(80, 80, 80, 0.1);
   width: 386px;
   background-color: #f6f6f6;
