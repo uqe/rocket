@@ -20,6 +20,13 @@ const FeedWrapper = styled.div`
   background-color: #f6f6f6;
   padding: 0 44px;
   padding-top: 30px;
+
+  @media (max-width: 768px) {
+    padding-top: 30px;
+    padding-right: 44px;
+    padding-bottom: 0px;
+    padding-left: 14px;
+  }
 `
 
 const Name = styled.span`
@@ -54,7 +61,7 @@ const FeedItem = styled.li`
 `
 const Avatar = styled.figure`
   margin: 0;
-  width: 30px;
+  min-width: 30px;
   border-radius: 50%;
   text-align: center;
   height: 30px;
@@ -81,6 +88,7 @@ const Date = styled.span`
 const Money = styled(Text)`
   text-align: end;
   flex: 1;
+  white-space: nowrap;
 `
 
 interface Props {

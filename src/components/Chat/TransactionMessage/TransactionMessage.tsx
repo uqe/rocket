@@ -19,7 +19,7 @@ const Wrapper = styled.div<Message>`
   flex-direction: row-reverse;
 
   @media (max-width: 768px) {
-    left: '0% !important';
+    left: 0% !important;
     width: calc(100% - 32px) !important;
   }
 `
