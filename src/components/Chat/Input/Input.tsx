@@ -36,6 +36,7 @@ const TextArea = styled.textarea`
   font-size: 16px;
   line-height: 23px;
   color: white;
+
   :focus {
     outline: none !important;
   }
