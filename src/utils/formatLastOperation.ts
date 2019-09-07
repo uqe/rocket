@@ -1,9 +1,9 @@
-import { Feed } from 'Accounts'
+import { Transaction } from 'Accounts'
 import { formatMoney } from './'
 
-export const formatLastOperation = (feed: Feed): string => {
-  const character = feed.type === 'OUT' ? '-' : '+'
-  const money = formatMoney(feed.currency, feed.change)
+export const formatLastOperation = (transaction: Transaction): string => {
+  const character = transaction.type === 'OUT' ? '-' : '+'
+  const money = formatMoney(transaction.currency, transaction.change)
 
   return `${character} ${money}`
 }

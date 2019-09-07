@@ -1,5 +1,5 @@
 import { Message } from 'Messages'
-import { Feed } from 'Accounts'
+import { Transaction } from 'Accounts'
 import nanoid from 'nanoid'
 import { generateMessage } from './index'
 
@@ -7,7 +7,7 @@ type PartMessage = {
   id: string
   text: string
   role: string
-  feed: Feed
+  transaction: Transaction
   type: string
 }
 
@@ -18,7 +18,7 @@ export const generateHistory = (count: number): Message[] =>
         text: generateMessage(Math.floor(Math.random() * (3 - 1 + 1)) + 1),
         id: nanoid(),
         role: Math.random() > 0.4 ? 'admin' : 'user',
-        feed: null,
+        transaction: null,
         type: 'text',
       })
     )

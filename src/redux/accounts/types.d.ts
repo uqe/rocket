@@ -10,7 +10,7 @@ declare module 'Accounts' {
     EUR = 'EUR',
   }
 
-  export type Feed = {
+  export type Transaction = {
     id: string
     date: number
     text: string
@@ -26,6 +26,6 @@ declare module 'Accounts' {
     percent: number
     creationDate: number
     currency: Currency
-    feed: Feed[]
+    feed: Transaction[]
   }
 }

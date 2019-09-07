@@ -3,18 +3,20 @@ import { createAction, createReducer } from 'typesafe-actions'
 
 import { generateHistory } from '../../utils'
 import { Message } from 'Messages'
-import { Feed } from 'Accounts'
+import { Transaction } from 'Accounts'
 
 export const addTextMessage = createAction('messages/ADD_TEXT_MESSAGE', action => (message: string) =>
-  action({ id: nanoid(), role: 'admin', text: message, feed: null, type: 'TEXT' })
+  action({ id: nanoid(), role: 'admin', text: message, transaction: null, type: 'text' })
 )
 
-export const addFeedMessage = createAction('messages/ADD_FEED_MESSAGE', action => (feed: Feed) =>
-  action({ id: nanoid(), role: 'admin', text: null, feed: feed, type: 'FEED' })
+export const addTransactionMessage = createAction(
+  'messages/ADD_TRANSACTION_MESSAGE',
+  action => (transaction: Transaction) =>
+    action({ id: nanoid(), role: 'admin', text: null, transaction: transaction, type: 'transaction' })
 )
 
 export const messages = createReducer(generateHistory(5000) as Message[])
   .handleAction(addTextMessage, (state, action) => [...state, action.payload])
-  .handleAction(addFeedMessage, (state, action) => [...state, action.payload])
+  .handleAction(addTransactionMessage, (state, action) => [...state, action.payload])
 
 export default messages

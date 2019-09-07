@@ -124,7 +124,7 @@ const data = [
       {
         date: 1551956100,
         text: 'Макдоналдс',
-        change: 282,
+        change: 300,
         currency: 'RUB',
         id: nanoid(),
         type: 'OUT',

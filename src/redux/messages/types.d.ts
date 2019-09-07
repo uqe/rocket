@@ -1,4 +1,4 @@
-declare type Feed = import('Accounts').Feed
+declare type Transaction = import('Accounts').Transaction
 
 declare module 'Messages' {
   export type Message = {
@@ -6,7 +6,7 @@ declare module 'Messages' {
     text: string | null
     role: string
     showName: boolean
-    feed: Feed | null
+    transaction: Transaction | null
     type: string
   }
 }

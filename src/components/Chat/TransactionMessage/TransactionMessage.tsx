@@ -2,7 +2,7 @@ import React, { CSSProperties } from 'react'
 import styled from 'styled-components'
 
 import { Message as MessageType } from 'Messages'
-import transaction from '../../../images/transaction.png'
+import transactionLogo from '../../../images/transaction.png'
 import { formatLastOperation, formatRocketrubles } from '../../../utils'
 
 interface Message {
@@ -66,15 +66,15 @@ interface Props {
   style?: CSSProperties
 }
 
-const TransactionMessage: React.SFC<Props> = ({ style, message }) => {
+const TransactionMessage: React.SFC<Props> = ({ style, message: { transaction } }) => {
   return (
     //@ts-ignore разобраться
     <Wrapper style={{ ...style, height: style.height - 5 }}>
       <Information>
-        <Logo src={transaction} alt="logo"></Logo>
-        <Name>{message.feed.text}</Name>
-        <Change>{formatLastOperation(message.feed)}</Change>
-        {message.feed.type === 'OUT' && <Rocketrubles>{formatRocketrubles(message.feed)}</Rocketrubles>}
+        <Logo src={transactionLogo} alt="logo"></Logo>
+        <Name>{transaction.text}</Name>
+        <Change>{formatLastOperation(transaction)}</Change>
+        {transaction.type === 'OUT' && <Rocketrubles>{formatRocketrubles(transaction)}</Rocketrubles>}
       </Information>
     </Wrapper>
   )

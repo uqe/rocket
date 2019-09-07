@@ -7,7 +7,7 @@ import AccountInformation from '../AccountInformation'
 import { accountSelectorById } from '../../../redux/accounts/selectors'
 import { convertUnixTime, formatLastOperation, createHistory } from '../../../utils'
 import { closeAccountFeed, openAccountFeed } from '../../../redux/ui'
-import { addFeedMessage } from '../../../redux/messages'
+import { addTransactionMessage } from '../../../redux/messages'
 
 import sendFeedIcon from '../../../images/send_feed.svg'
 import emoji from '../../../images/emoji.png'
@@ -97,8 +97,8 @@ const AccountFeed: React.FC<Props> = ({ match }) => {
     createHistory.push(`/`)
   }
 
-  const sendFeedToChat = (feed: Feed): void => {
-    dispatch(addFeedMessage(feed))
+  const sendTransactionToChat = (transaction: Transaction): void => {
+    dispatch(addTransactionMessage(transaction))
   }
 
   useEffect(() => {
@@ -116,7 +116,7 @@ const AccountFeed: React.FC<Props> = ({ match }) => {
             <Name>История операций</Name>
             <FeedList>
               {account.feed.map(item => (
-                <FeedItem key={item.id} onClick={() => sendFeedToChat(item)}>
+                <FeedItem key={item.id} onClick={() => sendTransactionToChat(item)}>
                   <Avatar />
                   <div>
                     <Text>{item.text}</Text>

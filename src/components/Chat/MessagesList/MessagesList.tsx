@@ -53,7 +53,7 @@ const cache = new CellMeasurerCache({
 })
 
 const renderMessage = ({ index, parent, style }: MessagesBox): JSX.Element => {
-  const isTransaction = parent.props.messages[index].type === 'FEED'
+  const isTransaction = parent.props.messages[index].type === 'transaction'
   return (
     <CellMeasurer cache={cache} columnIndex={0} parent={parent} rowIndex={index}>
       {isTransaction ? (
