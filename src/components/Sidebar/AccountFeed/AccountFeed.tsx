@@ -7,8 +7,10 @@ import AccountInformation from '../AccountInformation'
 import { accountSelectorById } from '../../../redux/accounts/selectors'
 import { convertUnixTime, formatLastOperation, createHistory } from '../../../utils'
 import { closeAccountFeed, openAccountFeed } from '../../../redux/ui'
-import sendFeedIcon from '../../../images/send_feed.svg'
 import { addFeedMessage } from '../../../redux/messages'
+
+import sendFeedIcon from '../../../images/send_feed.svg'
+import emoji from '../../../images/emoji.png'
 
 const Wrapper = styled.div`
   padding-top: 30px;
@@ -50,13 +52,18 @@ const FeedItem = styled.li`
     }
   }
 `
-const Avatar = styled.div`
+const Avatar = styled.figure`
+  margin: 0;
   width: 30px;
   border-radius: 50%;
   text-align: center;
   height: 30px;
   background-color: #eeeeee;
   margin-right: 10px;
+  background-image: url(${emoji});
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
 `
 
 const Text = styled.span`
@@ -98,7 +105,7 @@ const AccountFeed: React.FC<Props> = ({ match }) => {
     if (!account) {
       dispatch(openAccountFeed(match.params.id))
     }
-  }, [])
+  }, [account, dispatch, match.params.id])
 
   return (
     <Wrapper>
@@ -110,9 +117,7 @@ const AccountFeed: React.FC<Props> = ({ match }) => {
             <FeedList>
               {account.feed.map(item => (
                 <FeedItem key={item.id} onClick={() => sendFeedToChat(item)}>
-                  <Avatar>
-                    <span>🏦</span>
-                  </Avatar>
+                  <Avatar />
                   <div>
                     <Text>{item.text}</Text>
                     <Date>{convertUnixTime(item.date)}</Date>

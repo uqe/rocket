@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useDispatch } from 'react-redux'
 
 import { Account } from 'Accounts'
 import { formatMoney, convertUnixTime, formatLastOperation } from '../../../utils'
@@ -70,13 +69,6 @@ const Information = styled.div`
   flex-direction: column;
 `
 
-// const Button = styled.button`
-//   background-image: url(${disclosure});
-//   width: 35px;
-//   height: 35px;
-//   border: unset;
-//   background-color: transparent;
-// `
 const LastOperation = styled.span`
   color: #333333;
 `
@@ -88,8 +80,6 @@ interface Props {
 }
 
 const AccountInformation: React.FC<Props> = ({ account, full, onClick }) => {
-  const dispatch = useDispatch()
-
   return (
     <Wrapper>
       <AccountWrapper key={account.id}>

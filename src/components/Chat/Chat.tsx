@@ -7,7 +7,7 @@ import Input from './Input'
 
 import { messagesSelector } from '../../redux/messages/selectors'
 
-const Wrapper = styled.section`
+const Wrapper = styled.main`
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;

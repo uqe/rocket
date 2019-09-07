@@ -1,5 +1,4 @@
 import { createAction, createReducer } from 'typesafe-actions'
-import { createHistory } from '../../utils'
 import { Ui } from 'Ui'
 
 export const openAccountFeed = createAction('ui/OPEN_ACCOUNT_FEED', action => (id: string) => action(id))

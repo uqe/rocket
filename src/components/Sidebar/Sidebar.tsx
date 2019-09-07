@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect } from 'react'
+import React, { Suspense } from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { Router, Route } from 'react-router-dom'
@@ -11,7 +11,7 @@ import AccountsList from './AccountsList'
 import Shrug from './Shrug'
 import AccountFeed from './AccountFeed'
 
-const Wrapper = styled.section`
+const Wrapper = styled.aside`
   box-shadow: inset 1px 0px 10px 2px rgba(80, 80, 80, 0.1);
   width: 386px;
   background-color: #f6f6f6;
