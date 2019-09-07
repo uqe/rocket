@@ -3,7 +3,7 @@ import { formatMoney } from './formatMoney'
 import { formatLastOperation } from './formatLastOperation'
 import { injectGlobalStyle } from './injectGlobalStyle'
 import { generateHistory } from './generateHistory'
-import { generateSentences } from './generateSentences'
+import { generateMessage } from './generateMessage'
 import { createHistory } from './createHistory'
 import { formatRocketrubles } from './formatRocketrubles'
 
@@ -13,7 +13,7 @@ export {
   formatLastOperation,
   injectGlobalStyle,
   generateHistory,
-  generateSentences,
+  generateMessage,
   createHistory,
   formatRocketrubles,
 }

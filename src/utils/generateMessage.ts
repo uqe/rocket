@@ -509,7 +509,7 @@ const generateSentence = (): string => {
   return normalizedSentence
 }
 
-export const generateSentences = (count: number): string => {
+export const generateMessage = (count: number): string => {
   const sentences = new Array(count).fill(null).map(() => generateSentence())
   const mergedSentences = sentences.join(' ')
   return mergedSentences

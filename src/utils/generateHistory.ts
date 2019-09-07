@@ -1,7 +1,7 @@
 import { Message } from 'Messages'
 import { Feed } from 'Accounts'
 import nanoid from 'nanoid'
-import { generateSentences } from './index'
+import { generateMessage } from './index'
 
 type PartMessage = {
   id: string
@@ -15,7 +15,7 @@ export const generateHistory = (count: number): Message[] =>
   Array.from(Array(count).values())
     .map(
       (): PartMessage => ({
-        text: generateSentences(Math.floor(Math.random() * (3 - 1 + 1)) + 1),
+        text: generateMessage(Math.floor(Math.random() * (3 - 1 + 1)) + 1),
         id: nanoid(),
         role: Math.random() > 0.4 ? 'admin' : 'user',
         feed: null,
