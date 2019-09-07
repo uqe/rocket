@@ -74,12 +74,13 @@ const LastOperation = styled.span`
 `
 
 interface Props {
+  to: string
   full: boolean
   account: Account
   onClick: (id: string) => void
 }
 
-const AccountInformation: React.FC<Props> = ({ account, full, onClick }) => {
+const AccountInformation: React.FC<Props> = ({ account, full, onClick, to }) => {
   return (
     <Wrapper>
       <AccountWrapper key={account.id}>
@@ -90,7 +91,7 @@ const AccountInformation: React.FC<Props> = ({ account, full, onClick }) => {
               <Name>Счёт № {account.id}</Name>
               <Amount>{formatMoney(account.currency, account.amount)}</Amount>
             </Information>
-            <Button isOpenType={full} size={full ? 35 : 40} onClick={() => onClick(account.id)}></Button>
+            <Button isOpenType={full} size={full ? 35 : 40} onClick={() => onClick(account.id)} to={to}></Button>
           </InformationWrapper>
         </MainInformation>
         <SecondInformationWrapper>

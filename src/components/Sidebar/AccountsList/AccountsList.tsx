@@ -22,7 +22,7 @@ const AccountsList: React.FC<Props> = ({ accounts }) => {
   return (
     <>
       {accounts.map(account => (
-        <AccountInformation key={account.id} account={account} full onClick={openFeed} />
+        <AccountInformation key={account.id} account={account} full onClick={openFeed} to={`/accounts/${account.id}`} />
       ))}
     </>
   )

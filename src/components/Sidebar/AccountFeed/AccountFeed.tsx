@@ -111,7 +111,7 @@ const AccountFeed: React.FC<Props> = ({ match }) => {
     <Wrapper>
       {account && (
         <>
-          <AccountInformation account={account} full={false} onClick={closeFeed}></AccountInformation>
+          <AccountInformation account={account} full={false} onClick={closeFeed} to="/"></AccountInformation>
           <FeedWrapper>
             <Name>История операций</Name>
             <FeedList>
