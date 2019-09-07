@@ -1,1 +1,3 @@
-# rocket
+### Development
+
+start: `yarn && yarn start`
