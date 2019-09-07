@@ -10,7 +10,6 @@ const Wrapper = styled(Link)<Props>`
   width: ${({ size }): string => `${size}px`};
   height: ${({ size }): string => `${size}px`};
   border: unset;
-  background-color: transparent;
   padding: 0;
   border-radius: 50%;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
