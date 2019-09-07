@@ -36,7 +36,6 @@ const TextArea = styled.textarea`
   font-size: 16px;
   line-height: 23px;
   color: white;
-  resize: 'none';
   overflow: 'hidden';
 
   :focus {
@@ -97,6 +96,7 @@ const Input: React.FC = () => {
           value={inputValue}
           onChange={onChange}
           onKeyDown={sendMessageWithEnter}
+          style={{ resize: 'none' }}
           rows={1}
           placeholder="Введите сообщение"
         />
