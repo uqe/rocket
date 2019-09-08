@@ -18,7 +18,7 @@ const Wrapper = styled.aside`
   background-color: #f6f6f6;
   padding: 30px 16px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     width: 286px;
   }
 

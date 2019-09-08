@@ -17,7 +17,7 @@ const Wrapper = styled.div<Message>`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     left: ${({ role }) => (role === 'user' ? '0% !important' : '0% !important')};
     width: calc(100% - 32px) !important;
   }

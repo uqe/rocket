@@ -9,7 +9,7 @@ const Wrapper = styled.ul`
   margin: 0;
   padding: 0 44px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     padding: 0 14px;
   }
 `

@@ -21,7 +21,7 @@ const FeedWrapper = styled.div`
   padding: 0 44px;
   padding-top: 30px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     padding-top: 30px;
     padding-right: 44px;
     padding-bottom: 0px;
