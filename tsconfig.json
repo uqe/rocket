@@ -15,7 +15,7 @@
     "noEmit": true,
     "jsx": "react",
     "strictNullChecks": false,
-    "noImplicitAny": false
+    "noImplicitAny": true
   },
   "include": ["src", "config-overrides.js"]
 }

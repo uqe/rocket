@@ -23,6 +23,7 @@ const Shrug = styled.h3`
   background-size: 1000% 1000%;
   background-image: linear-gradient(-45deg, #231557, #44107a, #ff1361, #fff800);
   animation: ${rotate} 2.5s linear infinite;
+  background-clip: text;
   -webkit-background-clip: text;
 `
 

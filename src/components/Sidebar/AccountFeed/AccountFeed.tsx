@@ -47,7 +47,8 @@ const FeedItem = styled.li`
   padding: 15px;
   padding-right: 44px;
 
-  :hover {
+  :hover,
+  :focus {
     cursor: pointer;
     border-radius: 6px;
     background-color: #e9e9e9;

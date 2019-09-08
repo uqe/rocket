@@ -31,12 +31,14 @@ const FixedList = styled(FixedListRV)<ListProps>`
     background-color: #ffffff;
   }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
+  :hover,
   :focus {
     outline: none !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover,
+  ::-webkit-scrollbar-thumb:focus {
+    background: #555;
   }
 `
 

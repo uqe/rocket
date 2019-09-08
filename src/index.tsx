@@ -7,4 +7,4 @@ const rootElement = document.getElementById('root')
 
 render(<App />, rootElement)
 
-serviceWorker.unregister()
+serviceWorker.register()

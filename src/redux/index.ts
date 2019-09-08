@@ -4,7 +4,7 @@ import { rootReducer } from './reducers'
 import { StateType } from 'typesafe-actions'
 
 const productionStore = () => {
-  const middlewares = []
+  const middlewares: any = []
   // return applyMiddleware(...middlewares)
   const store = createStore(rootReducer, applyMiddleware(...middlewares))
   return store
