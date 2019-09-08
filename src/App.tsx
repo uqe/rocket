@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { injectGlobalStyle } from './utils'
 import { store } from './redux'
 import styled from 'styled-components'
+import { PersistGate } from 'redux-persist/integration/react'
 
 const Chat = lazy(() => import('./components/Chat'))
 const Sidebar = lazy(() => import('./components/Sidebar'))
@@ -16,14 +17,16 @@ const App: React.FC = () => {
   const GlobalStyle = injectGlobalStyle()
 
   return (
-    <Provider store={store}>
-      <GlobalStyle />
-      <Container>
-        <Suspense fallback={null}>
-          <Chat />
-          <Sidebar />
-        </Suspense>
-      </Container>
+    <Provider store={store.store}>
+      <PersistGate loading={null} persistor={store.persistor}>
+        <GlobalStyle />
+        <Container>
+          <Suspense fallback={null}>
+            <Chat />
+            <Sidebar />
+          </Suspense>
+        </Container>
+      </PersistGate>
     </Provider>
   )
 }
